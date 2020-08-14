@@ -1,0 +1,35 @@
+/* custom-tar-bar/index.wxss */
+.tar-bar{
+   position: fixed;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   height:48px;
+   background: white;
+   display: flex;
+   padding-bottom: env(safe-area-inset-bottom);
+  }
+  .tar-bar-border{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 1px;
+     background-color: rgba(0, 0, 0, 0.33);
+     transform: scaleY(0.5);
+  }
+  .tar-bar-item{
+      flex: 1;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  }
+  .tar-bar-item cover-image{
+      width: 27px;
+      height: 27px;
+  }
+  .tar-bar-item cover-view{
+     font-size: 10px;
+  }

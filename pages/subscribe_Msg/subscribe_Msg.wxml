@@ -1,0 +1,11 @@
+<!--pages/subscribe_Msg/subscribe_Msg.wxml-->
+<view class="container">
+     <view class="view_subscribe">        
+          <view class="view_subscribe_name">用户申请通知</view>  
+          <button class="button_subscribe" bindtap="subscribe_msg_reg" >订阅</button>
+     </view>
+       <view class="view_subscribe">        
+          <view class="view_subscribe_name">设备告警通知</view>  
+          <button class="button_subscribe" bindtap="subscribe_msg_dev" >订阅</button>
+     </view>
+</view>

@@ -1,0 +1,37 @@
+<!--pages/me/me.wxml-->
+<view class="view_userItem">
+     <view class="view_avatar"><open-data type="userAvatarUrl"></open-data></view>
+     <view class="view_userInfo">     
+        <view class="view_userInfo_ID">{{UserID}}</view>
+        <view class="view_userInfo_userLevel">昵称:{{UserName}}  级别:{{UserLevel =='0' ? '管理员' : '普通用户'}}</view>
+     </view>    
+</view>
+<view class="seperate"></view>
+
+<view class="view_item">
+   <view ><image class="view_item_logo_img" src="../../imgs/resg.png"></image></view>  
+    <text class="view_item_title">用户申请</text>
+    <image class="view_item_logo_right" src="../../imgs/jiantou2.png" bindtap="click_user_manager"></image>  
+</view>
+<view class="seperate2"></view>
+   
+<view class="view_item">
+     <view class="view_item_logo"><image class="view_item_logo_img" src="../../imgs/manager.png"></image></view>  
+    <text class="view_item_title">设备管理</text>
+   <image class="view_item_logo_right" src="../../imgs/jiantou2.png" bindtap="click_manager_dev"></image>
+</view>
+<view class="seperate2"></view>
+<view class="view_item">
+        <view class="view_item_logo"><image class="view_item_logo_img" src="../../imgs/log.png"></image></view>  
+        <text class="view_item_title">日志中心</text>
+        <image class="view_item_logo_right" src="../../imgs/jiantou2.png" bindtap="click_log_center"></image>
+</view>
+<view class="seperate2"></view>
+<view class="view_item">
+        <view class="view_item_logo"><image class="view_item_logo_img" src="../../imgs/dingyue.png"></image></view>  
+        <text class="view_item_title">订阅消息</text>
+        <image class="view_item_logo_right" src="../../imgs/jiantou2.png" bindtap="click_subscribe"></image>
+</view>
+<view class="seperate3"></view>
+
+

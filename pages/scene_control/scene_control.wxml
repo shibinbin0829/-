@@ -1,0 +1,33 @@
+<!--pages/device_control/device_control.wxml-->
+<view class="{{scenesTipCss}}">
+   当前未选择教室！
+</view>
+
+<view class="{{sceneListViewCss}}">
+  <!--内容布局-->
+        <!-- <view class="view_device_control_line">
+            <text class="lable_devices_count">场景数量：{{sceneArray.length}} 个</text> 
+            <button class="btn_update" style="display:none;" bindtap="button_update_scene_click" >
+                <image src="../../imgs/update.png" class="img_update"></image>
+            </button>
+          </view> -->
+        <!-- 场景列表 -->
+   <view class="scene_head">
+       <text class="scene_count">场景数量：{{sceneArray.length}}</text>
+     </view> 
+
+   <scroll-view class="view_scroll" style="height:{{sceneListScrollHeight}}px">
+            <view class='box' wx:for="{{sceneArray}}" wx:for-index="index" wx:for-item="scene">
+                <view class="view_scene_item">
+                        <image class="img_scene_ico" src="../../imgs/scene.png" ></image>
+                        <view class="view_scene_name">{{scene.SceneName}}</view>  
+                        <button class="button_scene_exec" data-index="{{index}}" bindtap="button_click_scene" >调用场景</button>
+                </view>
+            </view>
+            <view class="fill"></view>
+          </scroll-view>
+</view>
+
+
+<!-- <import src="../../template/template.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/> -->

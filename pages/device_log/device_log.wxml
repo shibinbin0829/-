@@ -1,0 +1,43 @@
+<!--pages/device_log/device_log.wxml-->
+<view class="{{logTipCss}}">
+当前无日志!
+</view>
+<view class="{{logListViewCss}}">
+
+<view class="areaLineView">
+ <!-- <picker bindchange="changeLogType"  value="{{logTypeIndex}}" range="{{logTypeList}}">
+        <view class="areaPicker">{{logTypeList[logTypeIndex]}}▼</view>
+    </picker> -->
+  <!-- multiIndex -->
+ 
+     <picker mode="multiSelector" bindchange="bindMultiPickerChange"
+      bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+       <text class="label_log_count">日志数量: {{logArray.length}} 个</text>
+        <input value='{{time}}▼' class="timePicker" placeholder='选择时间'/>
+    </picker> 
+</view>
+ 
+ <!-- 日志列表 -->
+     
+      <scroll-view class="view_scroll" style="height:{{logScrollHeight}}px;">
+            <view class='box' wx:for="{{logArray}}">             
+                <view class="view_log_item">
+                    <view class="view_log_title">
+                      <text  class="text_log_user">用户：{{item.UserName}}</text>                  
+                    </view>
+                    <view class="view_log_msg">消息： {{item.OperObj}}</view>
+                    <view class="line"></view>
+                </view>             
+            </view>
+           <!-- <view class="blank"></view> -->
+          </scroll-view>
+         
+</view>
+
+
+
+
+
+<!-- <import src="../../template/template.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/> -->
+

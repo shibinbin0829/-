@@ -1,0 +1,24 @@
+<!--pages/device_control/device_control.wxml-->
+<view class="{{devicesTipCss}}">
+   当前未选择教室！
+</view>
+
+<view class="{{devListViewCss}}">
+   <view class="device_head">
+       <text class="device_count">设备数量：{{deviceArray.length}}</text>
+   </view>   
+      <scroll-view class="view_scroll" style="height:{{deviceListScrollHeight}}px;">
+            <view class='box' wx:for="{{deviceArray}}" wx:for-index="index" wx:for-item="device">
+                <view class="view_device_item">
+                        <image class="img_device_ico" src="../../imgs/{{device.Dt}}.png" ></image>
+                        <view class="view_device_name">{{device.Name}}</view>  
+                        <view class="view_device_status">状态：</view>
+                        <view class="view_device_status2"><image class="view_device_status_img"
+                        src="{{device.DevOnline=='1' ? '../../imgs/online.png' : '../../imgs/offline.png'}}"></image></view>
+                        <button class="button_device"  data-index="{{index}}" bindtap="device_control_open" >开</button>
+                       <button class="button_device" type="warn" data-index="{{index}}" bindtap="device_control_close" >关</button>
+                </view>
+            </view>
+            <!-- <view class="fill"></view> -->
+      </scroll-view>
+</view>

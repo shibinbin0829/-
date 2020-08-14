@@ -1,0 +1,36 @@
+<!--pages/device_add/device_add.wxml-->
+<view>
+
+ <text  class="text_css" style="{{CSS_UserID}}">用户ID：</text>
+  <input  class="input_css" style="{{CSS_UserID}}" placeholder="请输入用户名称" bindinput="useridInput" value="{{UserID}}"></input>
+  <view class="line" style="{{CSS_UserID}}"></view>
+
+  <text  class="text_css" style="{{CSS_UserName}}">用户名称：</text>
+  <input  class="input_css" style="{{CSS_UserName}}" placeholder="请输入用户ID" bindinput="usernameInput" value="{{UserName}}"></input>
+  <view class="line" style="{{CSS_UserName}}"></view>
+ 
+  <text class="text_css" style="{{CSS_DevID}}">设备ID：</text>
+  <input class="input_css" style="{{CSS_DevID}}" placeholder="请输入设备ID" bindinput="devidInput" value="{{DevID}}"></input>
+  <view class="line" style="{{CSS_DevID}}" ></view>
+
+  <text class="text_css" style="{{CSS_DevName}}">设备名称：</text>
+  <input  class="input_css" style="{{CSS_DevName}}" placeholder="请输入设备名称" bindinput="devnameInput" value="{{DevName}}"></input> 
+  <view class="line" style="{{CSS_DevName}}" ></view>
+
+   <text class="text_css" style="{{CSS_DevAddress}}" style="display:None">设备位置：</text>
+  <input  class="input_css" style="{{CSS_DevAddress}}" placeholder="请输入设备名称" bindinput="devaddressInput" value="{{DevAddress}}"></input> 
+  <view class="line" style="{{CSS_DevAddress}}" ></view>
+    
+  <button class="btn_css" style="{{CSS_Btn_Bind}}" bindtap="click_device_bind">绑定设备</button>
+   <view class="line" style="{{CSS_Btn_Bind}}"></view>
+
+  <button  class="btn_css" style="{{CSS_Btn_Add}}"bindtap="click_device_add">添加设备</button>
+   <view class="line" style="{{CSS_Btn_Add}}"></view>
+
+  <button class="btn_css" style="{{CSS_Btn_Edit}}" bindtap="click_device_edit">解除绑定</button> 
+   <view class="line" style="{{CSS_Btn_Edit}}"></view>
+
+  <button class="btn_css" style="{{CSS_Btn_Un_Bind}}" bindtap="click_device_un_bind">解除绑定</button> 
+   <view class="line" style="{{CSS_Btn_Un_Bind}}"></view>
+
+</view>

@@ -1,0 +1,63 @@
+<!--pages/register/register.wxml-->
+  <view class="scan_view" style="{{page_show}}"> 
+      <view class="scan_item_view">
+        <text class="label_devid">微信ID：</text>
+        <input placeholder='请输入昵称' class="input_devid" value="{{weixinName}}"></input> 
+      </view>
+     
+    <view class="scan_item_view">
+        <text class="label_devid"  >昵称：</text>
+        <input placeholder='请输入昵称' class="input_devid" bindinput='regName' ></input>
+    </view>
+<!--下拉框-->
+   <view class='select_item' bindtap='bindShowMsg'>
+         <text class="label_cusName">平台：</text>
+         <view class="select_item_view">
+            <text style="padding-left:2px;">{{CusName}}</text>
+            <image class="select_item_img" src="../../imgs/down.png"></image>
+        </view>
+   </view>
+<!--下拉需要显示的列表-->  
+ <view class="select_box">
+        <view  wx:if="{{select}}" wx:for="{{CustomerArray}}" wx:for-index="index" >     
+          <view class="select_one" bindtap="mySelect" data-index="{{index}}">{{item.CusName}}</view>   
+        </view>
+  </view>
+
+    <view class="scan_item_view">
+      <button class = "btn_css" bindtap="click_register">提交申请</button>
+    </view>    
+</view>
+ 
+<view class="scan_view" style="{{scan_code_show}}">
+       <view class="scan_item_view">
+          <text class="label_devid" >教室ID:</text> 
+          <input class="input_devid" placeholder='扫码自动填充' value="{{san_result_classID}}"  ></input> 
+        </view>
+          
+       <view class="scan_item_view">
+          <text class="label_devid" >教室名称:</text> 
+          <input class="input_devid" placeholder='扫码自动填充' value="{{san_result_className}}"   ></input>
+      </view>
+ 
+    <view class="scan_item_view">
+        <text class="label_devid" >教室地址:</text> 
+        <input class="input_devid"  placeholder='扫码自动填充' value="{{san_result_classAddress}}" ></input>
+    </view> 
+
+    <view class="scan_item_view">
+       <text class="label_devid" >在线状态:</text> 
+        <input class="input_devid"  placeholder='扫码自动填充' value="{{san_result_classOnline?'在线':'离线'}}" ></input>
+    </view> 
+
+
+    <view class="scan_item_view">
+      <button class = "btn_css" bindtap="getScancode">扫码打开设备</button>
+      <image class="btn_repair" src="../../imgs/repair.png" bindtap="dev_repair"></image>
+    </view>  
+
+    <view class="scan_item_view">
+      <button class = "btn_css" style="{{login_btn_show}}" bindtap="wx_loginFun">进入小程序后台</button>
+    </view>  
+
+  </view> 

@@ -1,0 +1,31 @@
+<!--pages/classroomRepair/classroom_repair.wxml-->
+<view class="container">
+       <view class="scan_item_view">
+          <text class="label_devid" >教室ID:</text> 
+          <input class="input_devid"  value="{{}}" ></input> 
+        </view>
+
+       <view class="scan_item_view">
+          <text class="label_devid" >教室名称:</text> 
+          <input class="input_devid" value="{{}}" ></input>
+      </view>
+ 
+     <view class="scan_item_view">
+       <text class="label_devid" >教室地址:</text> 
+        <input class="input_devid"   value="{{}}" ></input>
+     </view> 
+      
+      <view class="scan_item_view">
+        <text class="label_devid" >详细描述:</text> 
+     </view> 
+    <textarea class="input_devid2" bindinput="get_details" />  
+    <view class="note">注意：字数不能超过20个。</view>
+
+    <view class="scan_item_view2">    
+          <button class = "btn_css"  bindtap="btnsend" >提交</button>
+    </view>  
+
+</view>
+
+     
+     

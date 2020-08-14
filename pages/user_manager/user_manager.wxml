@@ -1,0 +1,20 @@
+<!--pages/user_manager/user_manager.wxml-->
+ 
+  <!-- 申请列表 -->
+  <view class="header">申请列表：</view>
+  <scroll-view class="view_scroll" style="height:{{RegListScrollHeight}}px">
+            <view class="box" wx:for="{{RegUserArray}}" >
+                <view class="view_msg_item"> 
+                 <!-- 用户ID:{{item.UserID}},昵称： -->
+                        <view class="view_usermsg">账号： <text>{{item.UserName}}</text></view>
+                        <view class="btn_view_css">
+                            <view class="btn_title">操作：</view>
+                            <button class="btn_css" data-tag="{{item.UserID}}" bindtap="click_allow_reg" >允许注册</button>
+                            <button class="btn_css" style="background-color:red;" data-tag="{{item.UserID}}" bindtap="click_un_allow_reg">忽略注册</button>
+                            <button class="btn_css" style="background-color:rgb(28, 146, 243);"  data-tag="{{item.UserID}}" bindtap="click_set_admin">设为管理员</button>
+                        </view>            
+                </view>
+            </view>
+  </scroll-view>
+
+ 

@@ -1,0 +1,67 @@
+<view class="css_swiper">
+<swiper indicator-dots="{{indicatorDots}}" style="width:100%"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}"  style="width:100%" mode="scaleToFill" />
+    </swiper-item>
+  </block>
+</swiper>
+</view> 
+
+<view class="marquee">
+    <view class="content">        
+      欢迎使用宽博-智慧教室控制系统 
+    </view>
+</view>
+
+<view class="login-from"> 
+ <view class="{{admin_login_css_show}}" style="margin-top:20px;">
+   <!--学号-->
+    <view class="inputView"> 
+      <image class="nameImage" src="../../imgs/name.png"></image> 
+      <text class="loginLab">账号：</text>
+      <input class="inputText" placeholder="" maxlength='10'  value="{{userid}}" bindinput="useridInput" /> 
+    </view> 
+    <!--密码-->
+    <view class="inputView"> 
+      <image class="keyImage" src="../../imgs/key.png"></image> 
+      <label class="loginLab">密码：</label> 
+      <input class="inputText" password="true" placeholder="" maxlength='10'  value="{{userpwd}}" bindinput="passwordInput" /> 
+    </view> 
+
+    <!--下拉框-->
+    <view class='select_item' bindtap='bindShowMsg'>
+         <text class="label_cusName" style="display:none;">平台：</text>         
+         <view class="select_item_view">            
+            <text>{{CusName}}</text>
+            <image class="select_item_img" src="../../imgs/down.png"></image>
+        </view>
+    </view>
+
+   <!--下拉列表显示的内容-->
+   <view class="select_box">
+        <view  wx:if="{{select}}" wx:for="{{CustomerArray}}" wx:for-index="index" >     
+          <view class="select_one" bindtap="mySelect" data-index="{{index}}">{{item.CusName}}</view>   
+        </view>
+   </view> 
+
+     <button class="btn_admin_login" bindtap="loginFun" >管理员登录</button>
+ </view>
+ 
+</view>  
+
+
+<view class="scan_code_view {{scan_code_css_show}}" style="margin-top:80px;" >
+ <!-- <button  class="scan_code_btn">111111111111</button> -->
+  <button class="scan_code_btn"  open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 
+    <image src='../../imgs/scancode.png' class="scan_code_image" mode='aspectFit'></image>  
+  </button>
+
+</view>
+  
+
+
+<view class="admin_login_view">
+  <button class="admin_login_interface"  bindtap="btn_show_admin"> 入口切换 </button> 
+</view>

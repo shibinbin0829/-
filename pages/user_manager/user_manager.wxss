@@ -1,0 +1,61 @@
+/* pages/user_manager/user_manager.wxss */
+ .header{
+    float: left;
+    margin-left: 5px ;
+    font-size: 16px;
+    margin-bottom: 10px;
+ }
+.view_scroll{
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+ /* 消息列表 */
+.view_msg_item{
+  width: 100%;
+  height: 70px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction:column;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+
+.view_usermsg{
+  width: 100%;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  margin-left: 5px;
+}
+.view_usermsg text{
+   margin-left: 13px;
+}
+.btn_view_css{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.btn_title{
+   font-size: 14px;
+   color: black;
+   line-height: 40px;
+   width:15%;
+   margin-left: 5px;
+}
+ .btn_css{
+  width:  26%;
+   font-weight: bold;
+   height: 32px;
+  font-size: 11px; 
+  line-height: 32px;
+  margin-top: 5px;
+  color: white;
+  background-color: rgb(13, 170, 84);
+  
+  /* margin-right: 10px; */
+}
+ 
+ 

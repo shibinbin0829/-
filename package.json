@@ -1,0 +1,14 @@
+{
+  "name": "touchcentral",
+  "version": "1.0.0",
+  "description": "WeChat small program tabbar   1、在template.js按照对应的key配置对应数据，其中current表示是否 选择当前的tab，直接配置为0即可   2、在对应的js引用template文件夹中的templalte.js------>var template = require('../../template/template.js');   3、然后在onLoad生命周期中注册对应的tabbar-------> template.tabbar(\"tabBar\", 0, this)//0表示第一个tabbar,1表示第二个tabbar如此类推   4、在对应的wxml中引入template.wxml------><import src=\"../../template/template.wxml\"/>   5、使用模板-------------><template is=\"tabBar\" data=\"{{tabBar:bindData.tabBar}}\"/>",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "weui-miniprogram": "^1.0.5"
+  }
+}

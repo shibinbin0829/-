@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/scene_control/scene_control",
+    "pages/device_log/device_log",
+    "pages/me/me",
+    "pages/login_wx/login_wx",
+    "pages/device_manager/device_manager",
+    "pages/user_msg/user_msg",
+    "pages/user_manager/user_manager",
+    "pages/classRoom_list/classRoom_list",
+    "pages/device_control/device_control",
+    "pages/classroom_repair/classroom_repair",
+    "pages/subscribe_Msg/subscribe_Msg"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "宽博智教",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/classRoom_list/classRoom_list",
+        "iconPath": "imgs/classlist.png",
+        "selectedIconPath": "imgs/classlist_sel.png",
+        "text": "教室列表"
+      },
+      {
+        "pagePath": "pages/device_control/device_control",
+        "iconPath": "imgs/manager2.png",
+        "selectedIconPath": "imgs/manager_sel.png",
+        "text": "设备控制"
+      },
+      {
+        "pagePath": "pages/scene_control/scene_control",
+        "iconPath": "imgs/list.png",
+        "selectedIconPath": "imgs/list_sel.png",
+        "text": "场景列表"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "imgs/me.png",
+        "selectedIconPath": "imgs/me_sel.png",
+        "text": "我"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

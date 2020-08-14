@@ -1,0 +1,26 @@
+<!--pages/device_control/device_control.wxml-->
+  <view class="contanier">
+    <view class="classRoom_head">
+       <text class="classRoom_count">教室数量：{{classRoomList.length}}</text>
+    </view>
+<scroll-view class="view_scroll" style="height:{{scrollHeight}}px">
+  <view class='box' wx:for="{{classRoomList}}" wx:for-index="index"  >   
+        <view class="view_classroom_item2"> 
+              <view  class="view_classroom_item_ico">  
+                    <image class="img_classroom_ico" src="../../imgs/cr.png" data-index="{{index}}" bindtap="click_class_head"></image>
+              </view>
+              <view class="view_classroom_content">
+                  <view name="idClsTitle" class="label_classroom_title"  >
+                      <text class="{{item.Online?'online_css':'unonline_css'}}" decode="{{true}}" >&nbsp;&nbsp;{{item.Online?'在线':'离线'}} </text>
+                      <text class="view_title_name"> {{item.Name}}</text>                  
+                  </view>
+                
+                  <view name="idClsOnline" class="label_classroom_online"  > 年级: {{item.GID}}</view>
+                  <view name="idClsAddr" class="label_classroom_addr"  >位置: {{item.Address}}</view>
+              </view>
+         </view>
+           <!-- <view class="view_classroom_item_line"></view> -->
+      </view>
+    <!-- <view class="list"></view> -->
+</scroll-view>
+</view>

@@ -1,0 +1,29 @@
+/* pages/device_add/device_add.wxss */
+.text_css{
+  width: 100%;
+  
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.input_css{
+  width: 100%; 
+  margin-left: 50px;
+  margin-right: 50px;
+  border-color: rgb(202, 200, 202);
+}
+.line{
+  margin: 0 auto;
+  height: 1px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #D8D8D8;
+  margin-bottom: 10px;
+}
+.btn_css{
+  font-size: 16px;
+  color: white;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color:#2BA245;
+  
+}

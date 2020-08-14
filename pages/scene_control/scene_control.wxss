@@ -1,0 +1,89 @@
+/* pages/device_control/device_control.wxss */
+.scene_head{
+  background-color: rgba(228, 227, 227, 0.808);
+  width: 100%;
+  height: 36px;
+}
+.scene_count{
+  width: 50%;
+  height: 36px;
+  font-size: 16px; 
+  margin-left: 10px; 
+  line-height: 36px;
+  float: left;
+  text-align: left;
+  color: rgba(114, 111, 111, 0.5);
+}
+
+.view_scenes_tip_show{
+    display: block;
+    margin-top: 150px;
+    font-size: 18px;
+    color: rgb(168, 164, 164);
+    text-align: center;
+}
+.view_scenes_tip_hide{
+  display: none;
+}
+
+.view_scenelist_show{
+  display: display;
+}
+.view_scenelist_hide{
+  display: none;
+}
+
+.view_scroll{
+  width: 100%;
+  margin-top: 5px;
+  padding: 0px;
+}
+
+/*场景列表 */
+.view_scene_item{
+  width: 100%;
+  height: 60px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+/*场景列表 场景图标*/
+.img_scene_ico{
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* item  场景名称 */
+.view_scene_name{
+  width: auto;
+  text-align: left;
+  font-size: 18px;
+  color:rgb(92, 91, 91);
+  margin-left: 10px;
+  float: left;
+  min-width: 40%;
+  line-height: 60px;
+}
+
+/* 执行场景 */
+.button_scene_exec{
+  width: auto;
+  text-align: center;
+  font-size: 14px;
+  color:rgb(248, 245, 245);
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(13, 170, 84);
+  line-height: 40px;
+  float: right;
+}
+.fill{
+   width: 100%;
+   height: 70px;
+}
